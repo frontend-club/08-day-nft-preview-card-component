@@ -1,0 +1,158 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 11
+2. Variables ............. 17
+3. Estilos generales ..... 32
+-------------------- 
+*/
+
+
+/* ----- Fuente ----- */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+
+/* ----- Variables ----- */
+:root {
+    /* Colores primarios */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /* Colores neutrales */
+    --body-color: hsl(217, 54%, 11%); /* main bg */
+    --card-color: hsl(216, 50%, 16%); /* card bg */
+    --line-color: hsl(215, 32%, 27%); /* line */
+    --white: hsl(0, 0%, 100%);
+    --overlay-bg: hsl(178, 100%, 50%, .3);
+
+    --font-size: 1.125rem;
+    --line-height: 1.375rem;
+}
+
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    color: var(--line-color);
+    background-color: var(--body-color);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 9px rgba(13, 17, 22, 0.5);
+    background-color: var(--card-color);
+}
+
+.card--image {
+    width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* ----- Estilos body ----- */
+.card__title {
+    font-size: 20px;
+    color: var(--white);
+}
+
+.card__copy {
+    font-size: 1rem;
+    color: var(--soft-blue);
+}
+
+/* ----- Estilos info ----- */
+.card__info {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+}
+
+.info1,
+.info2 {
+    display: flex;
+    align-items: center;
+}
+
+.color1 {
+    color: var(--cyan);
+    margin-left: 5px;
+}
+
+.color2 {
+    color: var(--soft-blue);
+    margin-left: 5px;
+}
+
+/* ----- Division ----- */
+hr {
+    border: 1px solid var(--line-color);
+}
+
+/* ----- Estilos author ----- */
+.card__author {
+    display: flex;
+    align-items: center;
+}
+
+.author--image {
+    width: 40px;
+}
+
+.author--name {
+    color: var(--soft-blue);
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.name {
+    color: var(--white);
+}
+
+/* ----- Efectos hover ----- */
+.card__title:hover,
+.name:hover {
+    color: var(--cyan);
+}
+
+.card__header {
+    position: relative;
+}
+
+.overlay {
+    position: absolute; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card:hover .overlay {
+    background-image: url('../images/icon-view.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: var(--overlay-bg);
+    cursor: pointer;
+    opacity: 1;
+    z-index: 1;
+  }
+
+  @media screen and (max-width: 320px) {
+    .card {
+        width: 80%;
+    }
+  }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Frontend Club">
+    <meta name="description" content="Componente de tarjeta de vista previa">
+    <!-- Biblioteca de íconos Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Archivo reset Normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Archivo de estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <title>NFT Preview Card Component</title>
+</head>
+
+<body>
+
+    <!-- Marcado HTML -->
+    <main class="container">
+        <div class="card">
+            <div class="card__header">
+                <img src="./images/image-equilibrium.jpg" alt="Background image" class="card--image">
+                <div class="overlay"></div>
+            </div>
+            <div class="card__body">
+                <h1 class="card__title">Equilibrium #3429</h1>
+                <p class="card__copy">Our Equilibrium collection promotes balance and calm.</p>
+                <div class="card__info">
+                    <div class="info1">
+                        <img src="./images/icon-ethereum.svg" alt="Leaf icon">
+                        <span class="color1">0.041 ETH</span>
+                    </div>
+                    <div class="info2">
+                        <img src="./images/icon-clock.svg" alt="Clock icon">
+                        <span class="color2">3 days left</span>
+                    </div>
+                </div>
+                <!-- division -->
+                <hr>
+                <div class="card__author">
+                    <img src="./images/image-avatar.png" alt="Avatar image" class="author--image">
+                    <p class="author--name">Creation of <span class="name">Jules Wyvern</span> </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
